@@ -1,0 +1,75 @@
+@startuml
+class Tarefa {
+    marcar_como_concluida()
+    alterar_prioridade()
+    __str__()
+        id
+    titulo
+    descricao
+    data_de_criacao
+    prazo
+    prioridade
+    prioridade
+    __init__()
+}
+class TarefaPessoal {
+    __str__()
+        categoria_pessoal
+    __init__()
+}
+class TarefaTrabalho {
+    __str__()
+        projeto
+    __init__()
+}
+class Usuario {
+    adicionar_tarefa()
+    remover_tarefa()
+    marcar_tarefa_como_concluida()
+    listar_tarefas()
+    __str__()
+        nome
+    email
+    __init__()
+}
+class UsuarioRepository {
+    adicionarNaLista()
+        __init__()
+}
+class UsuarioFactory {
+        __init__()
+}
+class TarefaFactory {
+    criarTarefaPessoal()
+    criarTarefaTrabalho()
+        __init__()
+}
+class Option {
+        id
+    titulo
+    acao
+    __init__()
+}
+class Menu {
+    selecionar_opcao()
+        options
+    __init__()
+}
+class LoopUtils {
+    setDeveManterOLoop()
+    getDeveManterOLoop()
+    menu_de_usuario()
+    voltar()
+    criarTarefaPessoal()
+    criarTarefaTrabalho()
+    remover_tarefa()
+    marcar_tarefa_como_concluida()
+    encontrarUsuarioPorNome()
+    encontrarUsuarioPorEmail()
+        deveManterOLoop
+    deveManterOLoop
+    __init__()
+}
+Tarefa <|-- TarefaPessoal
+Tarefa <|-- TarefaTrabalho
+@enduml
